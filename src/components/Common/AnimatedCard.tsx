@@ -1,0 +1,18 @@
+import React from 'react';
+
+/**
+ * AnimatedCard组件 - 移除所有动画效果
+ * 这个版本完全移除了所有可能导致闪烁的动画效果
+ */
+const AnimatedCard: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+}> = ({ children, className = '' }) => {
+  return (
+    <div className={`bg-[#1a1a2e] rounded-lg shadow-lg p-4 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AnimatedCard;
